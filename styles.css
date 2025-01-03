@@ -3,3 +3,80 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+    padding: 2vw 0vw;
+}
+
+/*----------------NavBar on the left------------------------*/
+.navLeft{
+    padding-left: 0.8vw;
+    position: relative;
+}
+.navLeft .firstText{
+    font-size: 20px;
+    font-weight: 800;
+    color: Orange;
+}
+.navLeft .secondText{
+    font-size: 20px;
+    font-weight: 800;
+    color: black;
+    z-index: 8;
+}
+.navLeft .circleBg{
+    background-color: orange;
+    width:25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    top:2rem;
+    left:4rem;
+    z-index: 4;
+}
+
+/*----------------NavBar on the right------------------------*/
+.navRight{
+    display: flex;
+    align-items: center;
+    margin-right:10px;
+    gap:1vw;
+    z-index: 100;
+}
+.navRight a {
+    text-decoration:none;
+    padding: 10px 20px;
+    border: 1px solid #0000003c;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000000bb;
+    transition: all ease 0.4s;
+    position: relative;
+    z-index: 10;
+    font-size: 18px;
+    overflow: hidden;
+}
+.navRight a::after{
+    content: "";
+    position: absolute;
+    height: 25%;
+    width: 100%;
+    background-color: orange;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+.navRight a:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+.navRight a:hover{
+    color: orange;
+} 
